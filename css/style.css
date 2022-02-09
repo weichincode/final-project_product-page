@@ -1,0 +1,41 @@
+@import url("https://fonts.google.com/specimen/Inter");
+@import url("https://fonts.google.com/specimen/Lexend+Deca");
+
+@import "reset.css";
+@import "bootstrap";
+@import "navbar.css";
+
+:root {
+  /* _typography */
+
+  --primary-matt-grey: hsl(0, 0%, 15%);
+  --primary-yellow: hsl(45, 99%, 70%);
+  --primary-cyan: hsl(188, 100%, 36%);
+
+  --secondary-grey: hsl(250, 6%, 43%);
+  --secondary-transparent-grey: hsla(250, 6%, 43%, 0.75);
+  --secondary-transparent-slight-grey: hsla(250, 6%, 43%, 0.6);
+
+  --secondary-white: hsl(210, 14%, 95%);
+  --secondary-transparent-white: hsla(210, 10%, 95%, 0.75);
+  --secondary-transparent-slight-white: hsla(0, 0%, 100%, 0.6);
+
+  --light-paragraph: "Inter", sans-serif;
+  --dark-paragraph: "Lexend Deca", sans-serif;
+
+  /* layouts */
+  --very-small: 320px;
+  --small-breakpoint: 480px;
+  --medium-breakpoint: 720px;
+  --large-breakpoint: 960px;
+  --wide-breakpoint: 1200px;
+}
+
+/* Set core root defaults */
+html {
+  font-size: 62.5%;
+}
+
+.h5 {
+  text-align: center;
+}
