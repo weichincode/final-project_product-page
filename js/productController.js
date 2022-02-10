@@ -29,7 +29,7 @@ class Product {
     let moreBtnId = "";
     this.productItems.forEach((item) => {
       moreBtnId = "item" + index;
-      console.log(`Btn id for displayProduct is ${moreBtnId}`);
+      console.log(`moreBtnId displayProduct = ${moreBtnId}`);
 
       productDetails += `
         <!-- item start -->
@@ -56,10 +56,17 @@ class Product {
     index = 0;
     this.productItems.forEach((item) => {
       moreBtnId = "item" + index;
-      console.log(`Btn id for modal ${moreBtnId}`);
-      document.getElementById(moreBtnId).addEventListener("click", function () {
-        displayItemDetail(item);
-      });
+
+      console.log(`moreBtnId = ${moreBtnId}`);
+      console.log(item);
+      console.log(document.querySelector("#moreBtnId"));
+
+      document
+        .querySelector("#moreBtnId")
+        .addEventListener("click", function () {
+          displayItemDetail(item);
+        });
+
       index++;
     });
   } // end of displayProduct method
