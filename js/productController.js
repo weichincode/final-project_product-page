@@ -55,17 +55,15 @@ class Product {
     // display item information when button clicked
     index = 0;
     this.productItems.forEach((item) => {
-      moreBtnId = "item" + index;
+      moreBtnId = "#item" + index;
 
       console.log(`moreBtnId = ${moreBtnId}`);
       console.log(item);
       console.log(document.querySelector("#moreBtnId"));
 
-      document
-        .querySelector("#moreBtnId")
-        .addEventListener("click", function () {
-          displayItemDetail(item);
-        });
+      document.querySelector(moreBtnId).addEventListener("click", function () {
+        displayItemDetail(item);
+      });
 
       index++;
     });
@@ -74,6 +72,7 @@ class Product {
 
 // displayItemDetail function for modal
 const displayItemDetail = (item) => {
+  console.log(item);
   document.querySelector("#itemName").innerText = item.name;
   document.querySelector("#itemDescription").innerText = item.description;
   document.querySelector("#itemImage").src = item.image;
