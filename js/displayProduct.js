@@ -1,9 +1,13 @@
+// gpu = row1
+// cpu = row2
+
 const gpu = new Product();
+const cpu = new Product();
 
 // >> name, description, image, price, sold, quantity
 
 gpu.addProduct(
-  "Asus GTX 3090 0",
+  "Asus GTX 3090",
   "This is an Asus GTX 3090",
   "./imgs/products/asusGTX3090.jpg",
   1399,
@@ -12,28 +16,63 @@ gpu.addProduct(
 );
 
 gpu.addProduct(
-  "Asus GTX 3090 1",
-  "This is an Asus GTX 3090",
-  "./imgs/products/asusGTX3090.jpg",
-  1399,
-  "300 sold, 5/5",
-  "5 available"
+  "EVGA GTX 3090",
+  "This is an EVGA GTX 3090",
+  "./imgs/products/evgaGTX3090.jpg",
+  1499,
+  "310 sold, 5/5",
+  "6 available"
 );
 gpu.addProduct(
-  "Asus GTX 3090 2",
-  "This is an Asus GTX 3090",
-  "./imgs/products/asusGTX3090.jpg",
-  1399,
-  "300 sold, 5/5",
-  "5 available"
+  "Gigabyte GTX 3090",
+  "This is an Gigabyte GTX 3090",
+  "./imgs/products/gigabyteGTX3090.jpg",
+  1599,
+  "320 sold, 5/5",
+  "7 available"
 );
 gpu.addProduct(
-  "Asus GTX 3090 3",
-  "This is an Asus GTX 3090",
+  "MSI GTX 3090",
+  "This is an MSI GTX 3090",
   "./imgs/products/asusGTX3090.jpg",
-  1399,
-  "300 sold, 5/5",
-  "5 available"
+  1699,
+  "330 sold, 5/5",
+  "8 available"
 );
 
-gpu.displayProduct();
+gpu.displayProduct(0);
+
+cpu.addProduct(
+  "AMD 3200G",
+  "This is an AMD 3200G",
+  "./imgs/products/amd3200G.jpg",
+  200,
+  "100 sold, 5/5",
+  "1 available"
+);
+cpu.addProduct(
+  "AMD 3200G",
+  "This is an AMD 3200G",
+  "./imgs/products/amd3200G.jpg",
+  200,
+  "100 sold, 5/5",
+  "1 available"
+);
+cpu.addProduct(
+  "AMD 3200G",
+  "This is an AMD 3200G",
+  "./imgs/products/amd3200G.jpg",
+  200,
+  "100 sold, 5/5",
+  "1 available"
+);
+cpu.addProduct(
+  "AMD 3200G",
+  "This is an AMD 3200G",
+  "./imgs/products/amd3200G.jpg",
+  200,
+  "100 sold, 5/5",
+  "1 available"
+);
+
+cpu.displayProduct(1);

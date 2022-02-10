@@ -18,18 +18,24 @@ class Product {
     };
 
     this.productItems.push(item);
-  } // end of addProduct method
+  } // end of method: addProduct
 
   // (2) displayProduct method
-  displayProduct() {
+  displayProduct(rowNumber) {
     console.log(this.productItems);
 
+    // Setup Variables
     let productDetails = "";
     let index = 0;
     let moreBtnId = "";
+    let rowIndex = rowNumber;
+    let rowId = "";
+
     this.productItems.forEach((item) => {
       moreBtnId = "item" + index;
       console.log(`moreBtnId displayProduct = ${moreBtnId}`);
+
+      rowId = "#row" + rowIndex;
 
       productDetails += `
         <!-- item start -->
@@ -48,15 +54,19 @@ class Product {
         <!-- item end -->
       `;
       index++;
-    }); // end of forEach loop
 
-    document.querySelector("#row").innerHTML = productDetails;
+      console.log(`rowId = ${rowId}`);
+      document.querySelector(rowId).innerHTML = productDetails;
+
+      console.log(rowId);
+    }); // end of productItems.forEach loop
 
     // display item information when button clicked
     index = 0;
     this.productItems.forEach((item) => {
       moreBtnId = "#item" + index;
 
+      // console log
       console.log(`moreBtnId = ${moreBtnId}`);
       console.log(item);
       console.log(document.querySelector("#moreBtnId"));
@@ -67,12 +77,19 @@ class Product {
 
       index++;
     });
-  } // end of displayProduct method
-} // end of Product class
+  } // end of method: displayProduct
+} // end of class: Product
 
-// displayItemDetail function for modal
+// function: displayItemDetail for modal
 const displayItemDetail = (item) => {
-  console.log(item);
+  // console log
+  console.log(item.name);
+  console.log(item.description);
+  console.log(item.image);
+  console.log(item.price);
+  console.log(item.sold);
+  console.log(item.quantity);
+
   document.querySelector("#itemName").innerText = item.name;
   document.querySelector("#itemDescription").innerText = item.description;
   document.querySelector("#itemImage").src = item.image;
