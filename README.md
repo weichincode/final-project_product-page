@@ -107,3 +107,70 @@ rowIndex++
 in productController.js under the displayProduct() method
 
 is there a way for to to set `if object == gpu, rowIndex == 0, else if object == gpu, rowIndex =1`?
+
+## use parameter to target rowId
+
+`cpu.displayProduct(1);`
+
+```js
+displayProduct(rowNumber) {
+    console.log(this.productItems);
+
+    // Setup Variables
+    let productDetails = "";
+    let index = 0;
+    let moreBtnId = "";
+    let rowIndex = rowNumber;
+    let rowId = "";
+
+    this.productItems.forEach((item) => {
+      moreBtnId = "item" + index;
+      console.log(`moreBtnId displayProduct = ${moreBtnId}`);
+
+      rowId = "#row" + rowIndex;
+
+      productDetails += `
+        <!-- item start -->
+        <div class="card col-lg-3 col-md-6 col-12 border">
+          <img
+            src="${item.image}"
+            class="card-img-top"
+            alt="item image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">${item.name}</h5>
+            <p class="card-text">${item.name}</p>
+            <a id="${moreBtnId}" href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModal">More</a>
+          </div>
+        </div>
+        <!-- item end -->
+      `;
+      index++;
+
+      console.log(`rowId = ${rowId}`);
+      document.querySelector(rowId).innerHTML = productDetails;
+
+      console.log(rowId);
+    }); // end of productItems.forEach loop
+```
+
+```
+0: {name: 'Asus GTX 3090', description: 'This is an Asus GTX 3090', image: './imgs/products/asusGTX3090.jpg', price: 1399, sold: '300 sold, 5/5', …}
+1: {name: 'EVGA GTX 3090', description: 'This is an EVGA GTX 3090', image: './imgs/products/evgaGTX3090.jpg', price: 1499, sold: '310 sold, 5/5', …}
+2: {name: 'Gigabyte GTX 3090', description: 'This is an Gigabyte GTX 3090', image: './imgs/products/gigabyteGTX3090.jpg', price: 1599, sold: '320 sold, 5/5', …}
+3: {name: 'MSI GTX 3090', description: 'This is an MSI GTX 3090', image: './imgs/products/asusGTX3090.jpg', price: 1699, sold: '330 sold, 5/5', …}
+length: 4
+[[Prototype]]: Array(0)
+```
+
+```
+0: {name: 'AMD 3200G 0', description: 'This is an AMD 3200G 0', image: './imgs/products/amd3200G.jpg', price: 200, sold: '100 sold, 5/5', …}
+1: {name: 'AMD 3200G 1', description: 'This is an AMD 3200G 1', image: './imgs/products/amd3200G.jpg', price: 200, sold: '100 sold, 5/5', …}
+2: {name: 'AMD 3200G 2', description: 'This is an AMD 3200G 2', image: './imgs/products/amd3200G.jpg', price: 200, sold: '100 sold, 5/5', …}
+3: {name: 'AMD 3200G 3', description: 'This is an AMD 3200G 3', image: './imgs/products/amd3200G.jpg', price: 200, sold: '100 sold, 5/5', …}
+length: 4
+[[Prototype]]: Array(0)
+```
+
+because i target 2 different rows
+cpu array over-ride gpu array thats why ends with 3 3 3 3 3 3

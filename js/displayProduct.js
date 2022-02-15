@@ -43,32 +43,32 @@ gpu.addProduct(
 gpu.displayProduct(0);
 
 cpu.addProduct(
-  "AMD 3200G",
-  "This is an AMD 3200G",
+  "AMD 3200G 0",
+  "This is an AMD 3200G 0",
   "./imgs/products/amd3200G.jpg",
   200,
   "100 sold, 5/5",
   "1 available"
 );
 cpu.addProduct(
-  "AMD 3200G",
-  "This is an AMD 3200G",
+  "AMD 3200G 1",
+  "This is an AMD 3200G 1",
   "./imgs/products/amd3200G.jpg",
   200,
   "100 sold, 5/5",
   "1 available"
 );
 cpu.addProduct(
-  "AMD 3200G",
-  "This is an AMD 3200G",
+  "AMD 3200G 2",
+  "This is an AMD 3200G 2",
   "./imgs/products/amd3200G.jpg",
   200,
   "100 sold, 5/5",
   "1 available"
 );
 cpu.addProduct(
-  "AMD 3200G",
-  "This is an AMD 3200G",
+  "AMD 3200G 3",
+  "This is an AMD 3200G 3",
   "./imgs/products/amd3200G.jpg",
   200,
   "100 sold, 5/5",

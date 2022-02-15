@@ -22,7 +22,7 @@ class Product {
 
   // (2) displayProduct method
   displayProduct(rowNumber) {
-    console.log(this.productItems);
+    // console.log(this.productItems);
 
     // Setup Variables
     let productDetails = "";
@@ -33,13 +33,12 @@ class Product {
 
     this.productItems.forEach((item) => {
       moreBtnId = "item" + index;
-      console.log(`moreBtnId displayProduct = ${moreBtnId}`);
 
       rowId = "#row" + rowIndex;
 
       productDetails += `
         <!-- item start -->
-        <div class="card col-lg-3 col-md-6 col-12 border">
+        <div class="card" style="width: 18rem;">
           <img
             src="${item.image}"
             class="card-img-top"
@@ -48,17 +47,17 @@ class Product {
           <div class="card-body">
             <h5 class="card-title">${item.name}</h5>
             <p class="card-text">${item.name}</p>
-            <a id="${moreBtnId}" href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModal">More</a>
+            <!-- <a id="${moreBtnId}" href="#" class="btn btn-primary" data-toggle="modal" data-target="#productModal">More</a> -->
+
+            <!-- Button trigger modal -->
+            <button type="button" id="${moreBtnId}" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">more</button>
           </div>
         </div>
         <!-- item end -->
       `;
       index++;
 
-      console.log(`rowId = ${rowId}`);
       document.querySelector(rowId).innerHTML = productDetails;
-
-      console.log(rowId);
     }); // end of productItems.forEach loop
 
     // display item information when button clicked
@@ -66,29 +65,19 @@ class Product {
     this.productItems.forEach((item) => {
       moreBtnId = "#item" + index;
 
-      // console log
-      console.log(`moreBtnId = ${moreBtnId}`);
-      console.log(item);
-      console.log(document.querySelector("#moreBtnId"));
-
       document.querySelector(moreBtnId).addEventListener("click", function () {
         displayItemDetail(item);
       });
 
       index++;
     });
+    console.log(this.productItems); // shows 2 array, items added correctly
   } // end of method: displayProduct
 } // end of class: Product
 
 // function: displayItemDetail for modal
 const displayItemDetail = (item) => {
-  // console log
-  console.log(item.name);
-  console.log(item.description);
-  console.log(item.image);
-  console.log(item.price);
-  console.log(item.sold);
-  console.log(item.quantity);
+  console.log(item);
 
   document.querySelector("#itemName").innerText = item.name;
   document.querySelector("#itemDescription").innerText = item.description;
