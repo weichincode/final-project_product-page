@@ -175,3 +175,7 @@ length: 4
 because i target 2 different rows
 cpu array over-ride gpu array thats why ends with 3 3 3 3 3 3
 so i need to target row 1 model & row 2 model
+
+change the btn id instead
+gpuitem0
+itemtype pass in as variable in displayProduct.js
