@@ -1,3 +1,8 @@
+# To-Do
+
+[] CSS
+[] Close button functionality
+
 # final-project_product-page
 
 ## for the modal to work

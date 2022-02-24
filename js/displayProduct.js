@@ -40,7 +40,7 @@ gpu.addProduct(
   "8 available"
 );
 
-gpu.displayProduct(0);
+gpu.displayProduct(0, "gpu");
 
 cpu.addProduct(
   "AMD 3200G 0",
@@ -75,4 +75,4 @@ cpu.addProduct(
   "1 available"
 );
 
-cpu.displayProduct(1);
+cpu.displayProduct(1, "cpu");

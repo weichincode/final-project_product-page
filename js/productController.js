@@ -21,7 +21,7 @@ class Product {
   } // end of method: addProduct
 
   // (2) displayProduct method
-  displayProduct(rowNumber) {
+  displayProduct(rowNumber, rowType) {
     // console.log(this.productItems);
 
     // Setup Variables
@@ -30,9 +30,11 @@ class Product {
     let moreBtnId = "";
     let rowIndex = rowNumber;
     let rowId = "";
+    let buttonType = rowType;
 
     this.productItems.forEach((item) => {
-      moreBtnId = "item" + index;
+      // moreBtnId = "item" + index;
+      moreBtnId = `${buttonType}${index}`;
 
       rowId = "#row" + rowIndex;
       console.log(rowId); // shows #row0 for GPU array & #row1 for cpu array
@@ -64,7 +66,8 @@ class Product {
     // display item information when button clicked
     index = 0;
     this.productItems.forEach((item) => {
-      moreBtnId = "#item" + index;
+      // moreBtnId = "#item" + index;
+      moreBtnId = `#${buttonType}${index}`;
 
       document.querySelector(moreBtnId).addEventListener("click", function () {
         displayItemDetail(item);
