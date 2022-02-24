@@ -3,6 +3,15 @@
 [] CSS
 [] Close button functionality
 
+# Tips
+
+- remember _not to delete code_ when testing
+  - comment it out and write the new code underneath
+  - once the new code works, then you delete the old code
+  -
+
+---
+
 # final-project_product-page
 
 ## for the modal to work
@@ -184,3 +193,15 @@ so i need to target row 1 model & row 2 model
 change the btn id instead
 gpuitem0
 itemtype pass in as variable in displayProduct.js
+
+id for "more" button
+
+- gpu0, gpu1, gpu2, gpu3
+- cpu0, cpu1, cpu2, cpu3
+
+// display item information when button clicked
+
+```js
+moreBtnId = `#${buttonType}${index}`
+document.querySelector(moreBtnId).addEventListener("click", function ()
+```
