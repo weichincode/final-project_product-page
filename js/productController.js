@@ -36,7 +36,7 @@ class Product {
       // moreBtnId = "item" + index;
       moreBtnId = `${buttonType}${index}`;
 
-      rowId = "#row" + rowIndex;
+      rowId = `#row${rowIndex}`;
       console.log(rowId); // shows #row0 for GPU array & #row1 for cpu array
 
       productDetails += `
